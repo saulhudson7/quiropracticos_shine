@@ -3,7 +3,7 @@
 @section('title','Health Lab')
 
 @section('content')
-    @include('partials.banner')
+    @include('partials.banner', ['carrucelImg' => $carrucelImg])
     @include('partials.about')
     @include('partials.services')
     @include('partials.appointment')

@@ -1,38 +1,30 @@
-  <!-- Start Banner -->
-    <div class="ulockd-home-slider">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="pogoSlider" id="js-main-slider">
-                    <div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(images/slider-01.jpg);">
-                        <div class="lbox-caption pogoSlider-slide-element">
-                            <div class="lbox-details">
-                                <h1>Bienvenido a "Quiropracticos SHINE"</h1>
-                                <p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum </p>
-                                <a href="#" class="btn">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(images/slider-02.jpg);">
-                        <div class="lbox-caption pogoSlider-slide-element">
-                            <div class="lbox-details">
-                                <h1>We are Expert in The Field of Health Lab</h1>
-                                <p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum</p>
-                                <a href="#appointment" class="btn">Appointment</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(images/slider-03.jpg);">
-                        <div class="lbox-caption pogoSlider-slide-element">
-                            <div class="lbox-details">
-                                <h1>Bienvenido a "Quiropracticos SHINE"</h1>
-                                <p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum </p>
-                                <a href="#" class="btn">Contact Us</a>
-                            </div>
-                        </div>
+<!-- Start Banner -->
+<div class="ulockd-home-slider">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="pogoSlider" id="js-main-slider">
 
+                @foreach($carrucelImg as $slide)
+                <div class="pogoSlider-slide" 
+                     data-transition="fade" 
+                     data-duration="1500" 
+                    style="background-image:url('{{ asset('images/carrucel/' . $slide->imagen) }}');">
+                    <div class="lbox-caption pogoSlider-slide-element">
+                        <div class="lbox-details">
+                            <h1>{{ $slide->titulo }}</h1>
+                            <p>{{ $slide->descripcion }}</p>
+                            @if(!empty($slide->btn_text) && !empty($slide->btn_link))
+                                <a href="{{ $slide->btn_link }}" class="btn">{{ $slide->btn_text }}</a>
+                            @else
+                                <a href="#" class="btn">Contact Us</a>
+                            @endif
+                        </div>
                     </div>
-                </div><!-- .pogoSlider -->
-            </div>
+                </div>
+                @endforeach
+
+            </div><!-- .pogoSlider -->
         </div>
     </div>
-    <!-- End Banner -->
+</div>
+<!-- End Banner -->

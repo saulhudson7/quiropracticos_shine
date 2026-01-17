@@ -21,6 +21,7 @@
 
     @include('partials.topbar')
     @include('partials.header')
+    
 
     <main>
         @yield('content')
