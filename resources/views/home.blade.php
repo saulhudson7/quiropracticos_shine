@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Health Lab')
+@section('title','Quiropracticos "SHINE"')
 
 @section('content')
     @include('partials.banner', ['carrucelImg' => $carrucelImg])

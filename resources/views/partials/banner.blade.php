@@ -16,7 +16,7 @@
                             @if(!empty($slide->btn_text) && !empty($slide->btn_link))
                                 <a href="{{ $slide->btn_link }}" class="btn">{{ $slide->btn_text }}</a>
                             @else
-                                <a href="#" class="btn">Contact Us</a>
+                                <a href="#" class="btn">Contactanos</a>
                             @endif
                         </div>
                     </div>

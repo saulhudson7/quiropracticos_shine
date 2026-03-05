@@ -6,10 +6,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>@yield('title','Health Lab')</title>
+    <title>@yield('title','Quiropracticos "SHINE"')</title>
 
     <!-- CSS -->
-    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('images/iconocolumna.jpg') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/pogo-slider.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
